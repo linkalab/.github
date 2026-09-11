@@ -1,0 +1,16 @@
+# artefatti generati dagli script in build/
+build/_*.html
+build/anteprima-readme.html
+build/preview-*.png
+build/shot-*.png
+build/crop-*.png
+build/assets
+
+# copie di lavoro degli asset del design system, che non vive qui:
+# render_banner.py si ferma e spiega dove prenderle se mancano
+build/*.woff2
+build/linkalab-logo-*.png
+
+__pycache__/
+.venv/
+.ruff_cache/

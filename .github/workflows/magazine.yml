@@ -1,0 +1,42 @@
+---
+name: Aggiorna gli articoli dal Magazine
+
+# Riscrive la lista degli ultimi articoli fra i marker BLOG-POST-LIST
+# nei due README del profilo, leggendola dal feed del sito.
+
+on:
+  schedule:
+    # ogni giorno alle 05:40 UTC. Il blog pubblica circa una volta a
+    # settimana: la cadenza giornaliera serve solo a non far passare
+    # giorni fra la pubblicazione e la comparsa qui.
+    - cron: "40 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Leggi il feed e riscrivi la lista
+        # pinnata al commit del tag 1.9.7: l'action ha permesso di
+        # scrittura sul repo, un tag mobile potrebbe cambiare sotto.
+        uses: gautamkrishnar/blog-post-workflow@f177491c77670f150ab4e9b9890254d8eba4164b
+        with:
+          feed_list: "https://www.linkalab.it/feed"
+          readme_path: "./profile/README.md,./profile/README.en.md"
+          max_post_count: 5
+          template: "- [$title]($url) <sub>$date</sub>$newline"
+          date_format: "dd.MM.yyyy"
+          commit_message: "chore: aggiorna gli articoli dal Magazine"
+          committer_username: "github-actions[bot]"
+          committer_email: "github-actions[bot]@users.noreply.github.com"
+          # il feed WordPress torna gli articoli già in ordine di
+          # pubblicazione: nessun riordino lato action.
+          disable_sort: false
+          sort_order: "desc"
+          retry_count: 3
+          retry_wait_time: 10

@@ -1,0 +1,10 @@
+---
+extends: default
+
+rules:
+  # i workflow GitHub contengono SHA pinnati che non si possono spezzare
+  line-length:
+    max: 120
+  # "on:" è una chiave obbligatoria dei workflow, non un booleano
+  truthy:
+    check-keys: false
