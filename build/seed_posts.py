@@ -27,6 +27,13 @@ TARGETS = [ROOT / "profile" / "README.md", ROOT / "profile" / "README.en.md"]
 
 
 def build_list() -> str:
+    """Costruisce la lista con lo stesso formato del workflow.
+
+    Attenzione: questo script e la GitHub Action non condividono il
+    formatter delle date. Se cambia `date_format` o `template` in
+    `.github/workflows/magazine.yml`, va cambiato anche qui, altrimenti
+    l'anteprima locale mostra un risultato che la produzione non produce.
+    """
     feed = feedparser.parse(FEED)
     if feed.bozo and not feed.entries:
         raise RuntimeError(f"feed non leggibile: {feed.bozo_exception}")

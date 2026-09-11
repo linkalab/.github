@@ -30,7 +30,12 @@ jobs:
           readme_path: "./profile/README.md,./profile/README.en.md"
           max_post_count: 5
           template: "- [$title]($url) <sub>$date</sub>$newline"
-          date_format: "dd.MM.yyyy"
+          # l'action usa la libreria npm dateformat, dove "mm" è il mese
+          # e "MM" sono i minuti: al contrario di date-fns e moment.
+          date_format: "UTC:dd.mm.yyyy"
+          # torna a false da solo appena si usa "template", e senza
+          # la prima voce resta attaccata al marker di apertura
+          tag_post_pre_newline: true
           commit_message: "chore: aggiorna gli articoli dal Magazine"
           committer_username: "github-actions[bot]"
           committer_email: "github-actions[bot]@users.noreply.github.com"
