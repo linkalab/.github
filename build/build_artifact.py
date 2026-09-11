@@ -78,12 +78,19 @@ def prepara(lingua: str, cache: dict[str, str]) -> str:
     # dopo il render l'URL di shields.io non c'e' piu'. L'attributo alt
     # invece sopravvive ed e' distinto per badge: e' la chiave con cui
     # rimettere al suo posto ognuno dei data URI.
-    badge_per_alt = {
-        alt: url
-        for alt, url in re.findall(
-            r"!\[([^\]]+)\]\((https://img\.shields\.io[^)]+)\)", md
-        )
-    }
+    badge_per_alt: dict[str, str] = {}
+    for alt, url in re.findall(r"!\[([^\]]+)\]\((https://img\.shields\.io[^)]+)\)", md):
+        if alt in badge_per_alt and badge_per_alt[alt] != url:
+            # l'alt e' l'unica chiave che sopravvive al proxy camo: con due
+            # badge omonimi non c'e' modo di sapere quale tag vuole quale
+            # URL, e il piu' silenzioso dei due errori sarebbe incorporarne
+            # uno al posto dell'altro senza che nessun controllo lo veda.
+            raise RuntimeError(
+                f'due badge diversi hanno lo stesso alt "{alt}": '
+                f"{badge_per_alt[alt]} e {url}. Rendi gli alt distinti in "
+                f"{LINGUE[lingua]['file']}."
+            )
+        badge_per_alt[alt] = url
 
     def sostituisci(m: re.Match) -> str:
         tag = m.group(0)

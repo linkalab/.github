@@ -80,8 +80,12 @@ def main() -> int:
             f"<meta charset='utf-8'><style>{CSS}</style><div class='box'>{corpo}</div>",
             encoding="utf-8",
         )
-        # l'HTML sta in build/, le immagini in profile/assets/: symlink
+        # l'HTML sta in build/, le immagini in profile/assets/: symlink.
+        # exists() segue il link e torna False se e' rotto, quindi da solo
+        # manderebbe symlink_to su un path occupato: va tolto prima.
         link = BUILD / "assets"
+        if link.is_symlink() and not link.exists():
+            link.unlink()
         if not link.exists():
             link.symlink_to(ROOT / "profile" / "assets")
 
