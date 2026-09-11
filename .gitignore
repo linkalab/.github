@@ -14,3 +14,5 @@ build/linkalab-logo-*.png
 __pycache__/
 .venv/
 .ruff_cache/
+.pytest_cache/
+.coverage

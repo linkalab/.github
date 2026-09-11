@@ -1,0 +1,45 @@
+[project]
+name = "linkalab-github-readme"
+version = "0.1.0"
+description = "Sorgente del profilo GitHub di Linkalab"
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "requests>=2.31",
+    "feedparser>=6.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=build --cov-branch --cov-report=term-missing"
+
+[tool.coverage.run]
+branch = true
+source = ["build"]
+
+[tool.coverage.report]
+fail_under = 100
+show_missing = true
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+]
+
+[tool.ruff]
+line-length = 100
+
+# gli script di build/ sono standalone e non un package: senza questo
+# elenco isort li tratta come dipendenze esterne e riordina gli import
+[tool.ruff.lint.isort]
+known-first-party = [
+    "build_artifact",
+    "conftest",
+    "preview",
+    "render_banner",
+    "render_flags",
+    "seed_posts",
+]
