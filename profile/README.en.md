@@ -3,7 +3,7 @@
   <img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/banner-en-light.png" alt="Linkalab, a company of Lynx Group. Enterprise data and AI, Cagliari and Milan. AI built to measure, on your own data.">
 </picture>
 
-<p align="right"><a href="https://github.com/linkalab">🇮🇹 <sub>Leggi in italiano</sub></a></p>
+<p align="right"><a href="https://github.com/linkalab"><img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/flag-it.png" height="14" alt=""> <sub>Leggi in italiano</sub></a></p>
 
 We build AI systems that run on a company's own data, inside the constraints that come with it: access control, audit, regulation, cost. We work out of Cagliari and Milan, we are part of Lynx Group, and we are an AWS partner.
 
@@ -18,9 +18,9 @@ The hard part of this job is not getting a model to work in a demo. It is what c
 ## Some of our recent projects
 
 - Platforms where agents run inside a boundary: a separate identity per agent, permissions written as policy rather than application code, every action recorded, a human approval where one is needed. The stack is FastAPI and React, with Keycloak for identity and OPA for policy.
-- Agents that prepare a case and stop short of the decision. They gather, check, draft; a person approves or corrects. The time saved is not in the judgement, it is in the gathering.
+- Agents that prepare a case and stop short of the decision. They gather, check, draft; a person approves or corrects. The time saved is not in the judgment, it is in the gathering.
 - MCP servers that open up the systems a company already runs, without rebuilding them: ERPs such as Oracle JD Edwards, vendor knowledge bases, internal tools. It is the least invasive way to give an agent access to something real.
-- Data pipelines and document generation: collecting and normalising from sources that do not talk to each other, cataloguing, producing documents somebody currently assembles by hand.
+- Data pipelines and document generation: collecting and normalizing from sources that do not talk to each other, cataloging, producing documents somebody currently assembles by hand.
 - Tools for working with AI without exposing your data. One strips personal data out of images before they leave the company, rewriting the pixels rather than covering them, with OCR and entity recognition running locally and no network traffic at all. Another sandboxes coding agents on developer machines.
 
 More detail on our site, in the [case studies](https://www.linkalab.it/casi-studio/).

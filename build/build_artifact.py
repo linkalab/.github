@@ -80,15 +80,27 @@ def prepara(lingua: str, cache: dict[str, str]) -> str:
     # rimettere al suo posto ognuno dei data URI.
     badge_per_alt = {
         alt: url
-        for alt, url in re.findall(r"!\[([^\]]+)\]\((https://img\.shields\.io[^)]+)\)", md)
+        for alt, url in re.findall(
+            r"!\[([^\]]+)\]\((https://img\.shields\.io[^)]+)\)", md
+        )
     }
 
     def sostituisci(m: re.Match) -> str:
         tag = m.group(0)
+
+        # badge di shields.io, riconosciuti dall'alt che camo conserva
         alt = re.search(r'alt="([^"]*)"', tag)
         if alt and alt.group(1) in badge_per_alt:
             url = badge_per_alt[alt.group(1)]
             return re.sub(r'src="[^"]*"', f'src="{badge_inline(url, cache)}"', tag)
+
+        # immagini del repository (bandiere): il file esiste gia' in locale
+        src = re.search(r'src="([^"]*)"', tag)
+        if src and RAW in src.group(1):
+            relativo = src.group(1).split(RAW, 1)[1]
+            locale = ROOT / "profile" / relativo
+            if locale.is_file():
+                return tag.replace(src.group(1), data_uri(locale))
         return tag
 
     html = re.sub(r"<img\b[^>]*>", sostituisci, html)
@@ -115,7 +127,7 @@ def main() -> int:
 
     corpi = "\n".join(
         f'<article class="pagina" data-lingua="{lingua}" '
-        f'{"" if lingua == "it" else "hidden"}>{html}</article>'
+        f"{'' if lingua == 'it' else 'hidden'}>{html}</article>"
         for lingua, html in pagine.items()
     )
 
