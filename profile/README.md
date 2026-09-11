@@ -3,7 +3,7 @@
   <img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/banner-it-light.png" alt="Linkalab, a company of Lynx Group. Dati e AI per l'impresa, Cagliari e Milano. AI su misura, con i tuoi dati.">
 </picture>
 
-<p align="right"><sub><a href="https://github.com/linkalab/.github/blob/main/profile/README.en.md">Read this in English</a></sub></p>
+<p align="right"><a href="https://github.com/linkalab/.github/blob/main/profile/README.en.md">🇺🇸 <sub>Read this in English</sub></a></p>
 
 Costruiamo sistemi di AI che girano sui dati delle aziende, dentro i vincoli che quei dati si portano dietro: accessi, audit, normativa, costi. Lavoriamo da Cagliari e da Milano, facciamo parte del Gruppo Lynx e siamo partner AWS.
 

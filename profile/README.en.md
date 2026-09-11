@@ -3,7 +3,7 @@
   <img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/banner-en-light.png" alt="Linkalab, a company of Lynx Group. Enterprise data and AI, Cagliari and Milan. AI built to measure, on your own data.">
 </picture>
 
-<p align="right"><sub><a href="https://github.com/linkalab">Leggi in italiano</a></sub></p>
+<p align="right"><a href="https://github.com/linkalab">🇮🇹 <sub>Leggi in italiano</sub></a></p>
 
 We build AI systems that run on a company's own data, inside the constraints that come with it: access control, audit, regulation, cost. We work out of Cagliari and Milan, we are part of Lynx Group, and we are an AWS partner.
 
