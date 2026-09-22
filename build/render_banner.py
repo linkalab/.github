@@ -35,6 +35,13 @@ COPY = {
     },
 }
 
+# La colonna di testo sta a sinistra nel banner storico; "right" e' la
+# variante speculare, che affianca la prima invece di sostituirla.
+LAYOUTS = {
+    "left": {"classe": "", "suffisso": ""},
+    "right": {"classe": "mirror", "suffisso": "-right"},
+}
+
 WIDTH, HEIGHT = 1280, 340
 
 # Font e logo arrivano dal design system e non stanno nel repo. Senza,
@@ -69,16 +76,18 @@ def controlla_asset() -> list[str]:
     return [nome for nome in ASSET_RICHIESTI if not (BUILD / nome).is_file()]
 
 
-def render(*, lang: str, variant: str, template: str, chrome: str) -> Path:
+def render(*, lang: str, variant: str, template: str, chrome: str, layout: str = "left") -> Path:
     html = (
         template.replace("__BG__", VARIANTS[variant])
         .replace("__EYEBROW__", COPY[lang]["eyebrow"])
         .replace("__PAYOFF__", COPY[lang]["payoff"])
+        .replace("__LAYOUT__", LAYOUTS[layout]["classe"])
     )
-    page = BUILD / f"_banner-{lang}-{variant}.html"
+    nome = f"banner-{lang}-{variant}{LAYOUTS[layout]['suffisso']}"
+    page = BUILD / f"_{nome}.html"
     page.write_text(html, encoding="utf-8")
 
-    out = OUT / f"banner-{lang}-{variant}.png"
+    out = OUT / f"{nome}.png"
     subprocess.run(
         [
             chrome,
@@ -116,8 +125,15 @@ def main() -> int:
 
     for lang in COPY:
         for variant in VARIANTS:
-            out = render(lang=lang, variant=variant, template=template, chrome=chrome)
-            print(f"{out.relative_to(BUILD.parent)}  {out.stat().st_size // 1024} KB")
+            for layout in LAYOUTS:
+                out = render(
+                    lang=lang,
+                    variant=variant,
+                    template=template,
+                    chrome=chrome,
+                    layout=layout,
+                )
+                print(f"{out.relative_to(BUILD.parent)}  {out.stat().st_size // 1024} KB")
     return 0
 
 

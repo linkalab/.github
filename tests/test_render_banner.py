@@ -10,7 +10,10 @@ import pytest
 
 import render_banner
 
-TEMPLATE = "<body style='background:__BG__'><p>__EYEBROW__</p><h1>__PAYOFF__</h1></body>"
+TEMPLATE = (
+    "<body class='__LAYOUT__' style='background:__BG__'>"
+    "<p>__EYEBROW__</p><h1>__PAYOFF__</h1></body>"
+)
 
 
 @pytest.fixture
@@ -84,6 +87,23 @@ def test_render_non_lascia_segnaposto_nella_pagina(build, chrome):
     assert "__" not in pagina
 
 
+def test_render_senza_layout_resta_sulla_colonna_sinistra(build, chrome):
+    render_banner.render(lang="it", variant="dark", template=TEMPLATE, chrome="chrome")
+
+    pagina = (build / "_banner-it-dark.html").read_text(encoding="utf-8")
+    assert "mirror" not in pagina
+
+
+def test_render_right_specchia_il_layout_in_un_file_affiancato(build, chrome):
+    out = render_banner.render(
+        lang="it", variant="dark", template=TEMPLATE, chrome="chrome", layout="right"
+    )
+
+    assert out == build / "profile" / "assets" / "banner-it-dark-right.png"
+    pagina = (build / "_banner-it-dark-right.html").read_text(encoding="utf-8")
+    assert "class='mirror'" in pagina
+
+
 def test_render_restituisce_il_png_nominato_per_lingua_e_variante(build, chrome):
     out = render_banner.render(lang="en", variant="dark", template=TEMPLATE, chrome="chrome")
 
@@ -127,6 +147,11 @@ def test_le_due_varianti_hanno_fondi_diversi():
     assert render_banner.VARIANTS["light"] != render_banner.VARIANTS["dark"]
 
 
+def test_i_due_layout_scrivono_su_nomi_file_diversi():
+    suffissi = {l["suffisso"] for l in render_banner.LAYOUTS.values()}
+    assert len(suffissi) == len(render_banner.LAYOUTS)
+
+
 # --- main -----------------------------------------------------------------
 
 
@@ -152,14 +177,18 @@ def test_main_nomina_gli_asset_mancanti_e_dice_dove_prenderli(build, chrome, cap
     assert "Design System" in err
 
 
-def test_main_genera_le_quattro_combinazioni(build, chrome):
+def test_main_genera_le_otto_combinazioni(build, chrome):
     assert render_banner.main() == 0
 
     prodotti = sorted(p.name for p in (build / "profile" / "assets").iterdir())
     assert prodotti == [
+        "banner-en-dark-right.png",
         "banner-en-dark.png",
+        "banner-en-light-right.png",
         "banner-en-light.png",
+        "banner-it-dark-right.png",
         "banner-it-dark.png",
+        "banner-it-light-right.png",
         "banner-it-light.png",
     ]
 
@@ -176,5 +205,5 @@ def test_main_riporta_una_riga_per_banner(build, chrome, capsys):
     render_banner.main()
 
     righe = capsys.readouterr().out.strip().splitlines()
-    assert len(righe) == 4
+    assert len(righe) == 8
     assert all(riga.endswith("KB") for riga in righe)

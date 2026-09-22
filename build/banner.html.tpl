@@ -39,7 +39,17 @@
 
   /* richiamo al grafo sopra la K del logotipo */
   .graph{position:absolute;right:0;top:0;height:340px;width:660px;opacity:.9}
+
+  /* variante a colonna destra: si specchia tutto tranne il grafo, che resta
+     in salita verso destra (specchiarlo lo farebbe leggere in calo) */
+  .mirror{justify-content:flex-end}
+  .mirror .edge{left:auto;right:0}
+  .mirror .content{padding-left:0;padding-right:72px;text-align:right}
+  .mirror .logo{margin-left:auto}
+  .mirror .graph{right:auto;left:0}
 </style>
+
+<body class="__LAYOUT__">
 
 <div class="edge"></div>
 
