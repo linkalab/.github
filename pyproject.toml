@@ -41,6 +41,7 @@ known-first-party = [
     "docs_markup",
     "preview",
     "render_banner",
+    "render_cover",
     "render_docs",
     "render_flags",
     "seed_posts",
