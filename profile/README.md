@@ -25,6 +25,37 @@ Di questo mestiere la parte difficile non è far funzionare un modello in una de
 
 Maggiori dettagli sul nostro sito, nei [casi studio](https://www.linkalab.it/casi-studio/).
 
+## Da sfogliare
+
+Due approfondimenti pubblicati a settembre: uno sul perché un agente non può agire con le credenziali di una persona, uno su una validazione normativa che gira in produzione. Ogni pagina si apre a schermo intero al click.
+
+<!-- DOCS-LIST:START -->
+<details>
+<summary><b>Agenti AI in azienda: con quali credenziali stanno agendo?</b> &middot; AI WhiteBox, 6 pagine</summary>
+<p align="center">
+<a href="https://github.com/linkalab/.github/blob/main/profile/assets/docs/ai-whitebox-identita-agenti/page-1.jpg"><img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/docs/ai-whitebox-identita-agenti/thumb-1.jpg" width="260" alt="Agenti AI in azienda: con quali credenziali stanno agendo?"></a>
+<a href="https://github.com/linkalab/.github/blob/main/profile/assets/docs/ai-whitebox-identita-agenti/page-2.jpg"><img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/docs/ai-whitebox-identita-agenti/thumb-2.jpg" width="260" alt="L’errore invisibile: trattare gli agenti come utenti umani"></a>
+<a href="https://github.com/linkalab/.github/blob/main/profile/assets/docs/ai-whitebox-identita-agenti/page-3.jpg"><img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/docs/ai-whitebox-identita-agenti/thumb-3.jpg" width="260" alt="Cos’è una Non Human Identity (NHI) dedicata?"></a>
+<a href="https://github.com/linkalab/.github/blob/main/profile/assets/docs/ai-whitebox-identita-agenti/page-4.jpg"><img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/docs/ai-whitebox-identita-agenti/thumb-4.jpg" width="260" alt="Least Privilege: dare all’agente solo ciò che gli serve"></a>
+<a href="https://github.com/linkalab/.github/blob/main/profile/assets/docs/ai-whitebox-identita-agenti/page-5.jpg"><img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/docs/ai-whitebox-identita-agenti/thumb-5.jpg" width="260" alt="Chi ha fatto cosa? La risposta deve essere tracciabile."></a>
+<a href="https://github.com/linkalab/.github/blob/main/profile/assets/docs/ai-whitebox-identita-agenti/page-6.jpg"><img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/docs/ai-whitebox-identita-agenti/thumb-6.jpg" width="260" alt="L’autonomia ha bisogno di confini definiti."></a>
+</p>
+<p align="center"><a href="https://github.com/linkalab/.github/blob/main/profile/assets/docs/ai-whitebox-identita-agenti.pdf">Apri il PDF completo (4.3 MB)</a></p>
+</details>
+
+<details>
+<summary><b>Compliance Shield: validazione intelligente dei prodotti assicurativi</b> &middot; Caso studio, 5 pagine</summary>
+<p align="center">
+<a href="https://github.com/linkalab/.github/blob/main/profile/assets/docs/compliance-shield-prodotti-assicurativi/page-1.jpg"><img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/docs/compliance-shield-prodotti-assicurativi/thumb-1.jpg" width="260" alt="Compliance Shield: validazione intelligente dei prodotti assicurativi"></a>
+<a href="https://github.com/linkalab/.github/blob/main/profile/assets/docs/compliance-shield-prodotti-assicurativi/page-2.jpg"><img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/docs/compliance-shield-prodotti-assicurativi/thumb-2.jpg" width="260" alt="Il labirinto normativo: normative complesse e product sheet"></a>
+<a href="https://github.com/linkalab/.github/blob/main/profile/assets/docs/compliance-shield-prodotti-assicurativi/page-3.jpg"><img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/docs/compliance-shield-prodotti-assicurativi/thumb-3.jpg" width="260" alt="Abbiamo realizzato un Motore di validazione con intelligenza normativa"></a>
+<a href="https://github.com/linkalab/.github/blob/main/profile/assets/docs/compliance-shield-prodotti-assicurativi/page-4.jpg"><img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/docs/compliance-shield-prodotti-assicurativi/thumb-4.jpg" width="260" alt="Dai controlli di routine alla governance strategica"></a>
+<a href="https://github.com/linkalab/.github/blob/main/profile/assets/docs/compliance-shield-prodotti-assicurativi/page-5.jpg"><img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/docs/compliance-shield-prodotti-assicurativi/thumb-5.jpg" width="260" alt="Governance verificabile per un go-to-market senza rischi"></a>
+</p>
+<p align="center"><a href="https://github.com/linkalab/.github/blob/main/profile/assets/docs/compliance-shield-prodotti-assicurativi.pdf">Apri il PDF completo (9.3 MB)</a></p>
+</details>
+<!-- DOCS-LIST:END -->
+
 ## Come si comincia
 
 | Modalità | Come funziona |

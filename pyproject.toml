@@ -38,8 +38,10 @@ line-length = 100
 known-first-party = [
     "build_artifact",
     "conftest",
+    "docs_markup",
     "preview",
     "render_banner",
+    "render_docs",
     "render_flags",
     "seed_posts",
 ]

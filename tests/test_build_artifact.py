@@ -107,6 +107,21 @@ def test_data_uri_trasporta_i_byte_del_file(tmp_path):
     assert decodifica(build_artifact.data_uri(file)) == b"\x89PNG\r\n\x1a\n dati binari"
 
 
+def test_data_uri_dichiara_il_tipo_jpeg_per_le_pagine_dei_caroselli(tmp_path):
+    file = tmp_path / "thumb-1.jpg"
+    file.write_bytes(b"\xff\xd8\xff")
+
+    assert build_artifact.data_uri(file).startswith("data:image/jpeg;base64,")
+
+
+def test_data_uri_rifiuta_un_estensione_che_non_dichiara_un_tipo(tmp_path):
+    file = tmp_path / "pagina.sconosciuto"
+    file.write_bytes(b"contenuto")
+
+    with pytest.raises(ValueError, match="tipo di immagine"):
+        build_artifact.data_uri(file)
+
+
 def test_data_uri_gestisce_un_file_vuoto(tmp_path):
     file = tmp_path / "vuoto.png"
     file.write_bytes(b"")

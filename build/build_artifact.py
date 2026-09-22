@@ -15,6 +15,7 @@ selettore di tema del visualizzatore.
 """
 
 import base64
+import mimetypes
 import re
 import sys
 from pathlib import Path
@@ -33,8 +34,17 @@ LINGUE = {
 
 
 def data_uri(percorso: Path) -> str:
+    """Incorpora un file come data URI, col tipo dedotto dall'estensione.
+
+    Il tipo non e' decorativo: un data URI che dichiara image/png su byte
+    JPEG resta a discrezione dello sniffing del browser, e le pagine dei
+    caroselli sono JPEG mentre banner e bandiere sono PNG.
+    """
+    tipo, _ = mimetypes.guess_type(percorso.name)
+    if tipo is None:
+        raise ValueError(f"tipo di immagine non riconosciuto per {percorso.name}")
     b64 = base64.b64encode(percorso.read_bytes()).decode("ascii")
-    return f"data:image/png;base64,{b64}"
+    return f"data:{tipo};base64,{b64}"
 
 
 def badge_inline(url: str, cache: dict[str, str]) -> str:

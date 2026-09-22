@@ -9,10 +9,13 @@ profile/
   README.md          pagina del profilo, italiano (quella mostrata)
   README.en.md       stessa pagina in inglese, raggiungibile dal link in alto
   assets/            quattro banner (due lingue x chiaro/scuro) e due bandiere
+    docs/          i PDF dei caroselli e le loro pagine rasterizzate
 .github/workflows/
   magazine.yml       aggiorna gli articoli dal feed del sito
 build/               generatori e anteprima, non servono a chi legge il profilo
   render_banner.py   banner, dai token del design system
+  render_docs.py     pagine dei caroselli PDF, rasterizzate con poppler
+  docs_markup.py     il blocco HTML con cui i caroselli stanno nel README
   render_flags.py    bandierine dei link fra le due lingue
   seed_posts.py      riempie la lista articoli in locale
   preview.py         screenshot della pagina a 1280 e 375 px
@@ -58,6 +61,24 @@ uv run --script build/render_flags.py
 ```
 
 Sono immagini e non emoji perché le emoji bandiera sono sequenze di due caratteri che il sistema operativo deve comporre, e Windows non lo fa: al posto della bandiera mostra le lettere `US` e `IT`.
+
+## I caroselli si sfogliano come immagini
+
+I PDF pubblicati su LinkedIn stanno in `profile/assets/docs/`, un file per carosello, e il profilo ne mostra le pagine dentro un `<details>` chiuso:
+
+```bash
+uv run --script build/render_docs.py
+```
+
+Lo script rasterizza ogni pagina in due tagli con `pdftoppm`, poi riscrive il blocco fra i marker `DOCS-LIST` in entrambi i README. Serve `poppler-utils`; se manca, lo script si ferma e dice come installarlo.
+
+**Un carosello che avanza al click non è realizzabile qui.** GitHub rimuove CSS e script dal markdown, quindi non esistono né `:target` né un gestore di eventi: quello che resta è la griglia di miniature, dove ogni pagina è un link alla propria versione grande.
+
+**I due tagli non si possono unire in uno.** La miniatura sta in un `src` e la pagina piena in un `href`: tutto ciò che finisce in un `src` viene scaricato attraverso il proxy camo anche da chi il `<details>` non lo apre mai, perché GitHub lo rende chiuso ma non pigro. Le undici miniature pesano insieme 470 KB, le pagine grandi 3,2 MB che nessuno scarica finché non clicca.
+
+**I titoli delle miniature escono dalle pagine, non da un elenco scritto a mano.** `pdftotext` legge il titolo stampato in cima a ogni pagina e lo usa come testo alternativo, così un carosello rifatto non lascia indietro didascalie che parlano della versione precedente. Dove il titolo non si stacca dal corpo del testo, il campo `alt_override` del manifest lo scrive a mano: succede su tre pagine del caso studio.
+
+I documenti sono in italiano anche nella pagina inglese, che lo dichiara nel link al PDF.
 
 ## Guardare la pagina prima di pubblicarla
 
