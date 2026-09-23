@@ -30,7 +30,7 @@ Maggiori dettagli sul nostro sito, nei [casi studio](https://www.linkalab.it/cas
 Due approfondimenti pubblicati a settembre: uno sul perché un agente non può agire con le credenziali di una persona, uno su una validazione normativa che gira in produzione. Ogni pagina si apre a schermo intero al click.
 
 <!-- DOCS-LIST:START -->
-<details>
+<details open>
 <summary><b>Agenti AI in azienda: con quali credenziali stanno agendo?</b> &middot; AI WhiteBox, 6 pagine</summary>
 <p align="center">
 <a href="https://github.com/linkalab/.github/blob/main/profile/assets/docs/ai-whitebox-identita-agenti/page-1.jpg"><img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/docs/ai-whitebox-identita-agenti/thumb-1.jpg" width="260" alt="Agenti AI in azienda: con quali credenziali stanno agendo?"></a>
@@ -43,7 +43,7 @@ Due approfondimenti pubblicati a settembre: uno sul perché un agente non può a
 <p align="center"><a href="https://github.com/linkalab/.github/blob/main/profile/assets/docs/ai-whitebox-identita-agenti.pdf">Apri il PDF completo (4.3 MB)</a></p>
 </details>
 
-<details>
+<details open>
 <summary><b>Compliance Shield: validazione intelligente dei prodotti assicurativi</b> &middot; Caso studio, 5 pagine</summary>
 <p align="center">
 <a href="https://github.com/linkalab/.github/blob/main/profile/assets/docs/compliance-shield-prodotti-assicurativi/page-1.jpg"><img src="https://raw.githubusercontent.com/linkalab/.github/main/profile/assets/docs/compliance-shield-prodotti-assicurativi/thumb-1.jpg" width="260" alt="Compliance Shield: validazione intelligente dei prodotti assicurativi"></a>

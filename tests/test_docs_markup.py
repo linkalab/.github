@@ -126,10 +126,10 @@ def test_blocco_inglese_dichiara_che_il_documento_e_in_italiano(documento):
     assert "English title" in html
 
 
-def test_blocco_resta_chiuso_finche_non_lo_si_apre(documento):
+def test_blocco_nasce_aperto_e_resta_richiudibile(documento):
     html = docs_markup.blocco_documento(doc=documento, lang="it", alt=["uno"], peso_mb=1.0)
-    assert html.startswith("<details>")
-    assert "<details open" not in html
+    assert html.startswith("<details open>")
+    assert "<summary>" in html
 
 
 # --- marker ----------------------------------------------------------------

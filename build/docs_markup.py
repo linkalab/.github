@@ -94,7 +94,10 @@ def miniatura(*, doc: Documento, pagina: int, alt: str) -> str:
 
 
 def blocco_documento(*, doc: Documento, lang: str, alt: list[str], peso_mb: float) -> str:
-    """Il <details> di un documento: intestazione, griglia, link al PDF."""
+    """Il <details> di un documento: intestazione, griglia, link al PDF.
+
+    Aperto di default: le miniature sono il contenuto, non un extra da scoprire.
+    """
     copy = COPY[lang]
     conteggio = copy["pagine"].format(n=len(alt))
     scarica = copy["scarica"].format(mb=f"{peso_mb:.1f}")
@@ -102,7 +105,7 @@ def blocco_documento(*, doc: Documento, lang: str, alt: list[str], peso_mb: floa
         miniatura(doc=doc, pagina=n, alt=testo) for n, testo in enumerate(alt, start=1)
     )
     return (
-        "<details>\n"
+        "<details open>\n"
         f"<summary><b>{doc.titolo[lang]}</b> &middot; "
         f"{doc.occhiello[lang]}, {conteggio}</summary>\n"
         '<p align="center">\n'

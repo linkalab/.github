@@ -64,7 +64,7 @@ Sono immagini e non emoji perché le emoji bandiera sono sequenze di due caratte
 
 ## I caroselli si sfogliano come immagini
 
-I PDF pubblicati su LinkedIn stanno in `profile/assets/docs/`, un file per carosello, e il profilo ne mostra le pagine dentro un `<details>` chiuso:
+I PDF pubblicati su LinkedIn stanno in `profile/assets/docs/`, un file per carosello, e il profilo ne mostra le pagine dentro un `<details open>`, aperto di default e richiudibile:
 
 ```bash
 uv run --script build/render_docs.py
@@ -74,7 +74,7 @@ Lo script rasterizza ogni pagina in due tagli con `pdftoppm`, poi riscrive il bl
 
 **Un carosello che avanza al click non è realizzabile qui.** GitHub rimuove CSS e script dal markdown, quindi non esistono né `:target` né un gestore di eventi: quello che resta è la griglia di miniature, dove ogni pagina è un link alla propria versione grande.
 
-**I due tagli non si possono unire in uno.** La miniatura sta in un `src` e la pagina piena in un `href`: tutto ciò che finisce in un `src` viene scaricato attraverso il proxy camo anche da chi il `<details>` non lo apre mai, perché GitHub lo rende chiuso ma non pigro. Le undici miniature pesano insieme 470 KB, le pagine grandi 3,2 MB che nessuno scarica finché non clicca.
+**I due tagli non si possono unire in uno.** La miniatura sta in un `src` e la pagina piena in un `href`: tutto ciò che finisce in un `src` viene scaricato attraverso il proxy camo comunque, perché GitHub non rende pigro il `<details>` nemmeno quando è chiuso. Le undici miniature pesano insieme 470 KB, le pagine grandi 3,2 MB che nessuno scarica finché non clicca.
 
 **I titoli delle miniature escono dalle pagine, non da un elenco scritto a mano.** `pdftotext` legge il titolo stampato in cima a ogni pagina e lo usa come testo alternativo, così un carosello rifatto non lascia indietro didascalie che parlano della versione precedente. Dove il titolo non si stacca dal corpo del testo, il campo `alt_override` del manifest lo scrive a mano: succede su tre pagine del caso studio.
 
