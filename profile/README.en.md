@@ -76,11 +76,11 @@ AWS cloud, data pipelines, machine learning and agentic systems, business intell
 We write about enterprise AI from the point of view of the people who have to run it and then defend it: rules, accountability, control, and now and then the technical arithmetic nobody bothers to do. The articles are in Italian.
 
 <!-- BLOG-POST-LIST:START -->
+- [Il costo invisibile dell’AI in azienda, perché spendere meno per token non significa spendere meno](https://linkalab.it/costo-ai-in-azienda-ai-finops/) <sub>24.09.2026</sub>
 - [Navier–Stokes: 130 miliardi di token per dimostrarlo, due comandi per verificarlo](https://linkalab.it/ricerca-sviluppo-navier-stokes-ai-verifica-dimostrazione/) <sub>16.09.2026</sub>
 - [Dalla generazione alla verifica: cosa insegna Fermat sull’AI](https://linkalab.it/ricerca-sviluppo-generazione-verifica-fermat-ai/) <sub>10.09.2026</sub>
 - [AI Act, cosa cambia davvero per le aziende che usano l’AI](https://linkalab.it/ai-act-cosa-cambia-per-le-aziende/) <sub>08.09.2026</sub>
 - [Quando la Knowledge Base non esiste: far scrivere una wiki a un agente, e tenerla sotto controllo](https://linkalab.it/ricerca-sviluppo-knowledge-base-ai-application-maintenance/) <sub>04.09.2026</sub>
-- [Human in the loop, perché il controllo umano non è un limite all’AI ma una garanzia](https://linkalab.it/human-in-the-loop-controllo-umano-ai/) <sub>27.08.2026</sub>
 
 <!-- BLOG-POST-LIST:END -->
 
