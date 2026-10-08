@@ -76,11 +76,11 @@ AWS cloud, data pipelines, machine learning and agentic systems, business intell
 We write about enterprise AI from the point of view of the people who have to run it and then defend it: rules, accountability, control, and now and then the technical arithmetic nobody bothers to do. The articles are in Italian.
 
 <!-- BLOG-POST-LIST:START -->
+- [Resell or Build? Perché l’era dell’AI sta azzerando le distanze tra le grandi software house e chi sviluppa su misura](https://linkalab.it/resell-or-build-sviluppo-software-ai-whitebox/) <sub>08.10.2026</sub>
 - [Ascoltare ciò che nessuno ascolta: come abbiamo portato il monitoraggio reputazionale dentro i podcast su Spotify](https://linkalab.it/ricerca-sviluppo-monitoraggio-reputazionale-podcast-spotify/) <sub>05.10.2026</sub>
 - [Agenti AI in produzione: perché le utenze condivise sono il buco nero della sicurezza aziendale](https://linkalab.it/agenti-ai-produzione-utenze-condivise-nhi-sicurezza/) <sub>01.10.2026</sub>
 - [Il costo invisibile dell’AI in azienda, perché spendere meno per token non significa spendere meno](https://linkalab.it/costo-ai-in-azienda-ai-finops/) <sub>24.09.2026</sub>
 - [Navier–Stokes: 130 miliardi di token per dimostrarlo, due comandi per verificarlo](https://linkalab.it/ricerca-sviluppo-navier-stokes-ai-verifica-dimostrazione/) <sub>16.09.2026</sub>
-- [Dalla generazione alla verifica: cosa insegna Fermat sull’AI](https://linkalab.it/ricerca-sviluppo-generazione-verifica-fermat-ai/) <sub>10.09.2026</sub>
 
 <!-- BLOG-POST-LIST:END -->
 
