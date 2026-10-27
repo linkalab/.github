@@ -76,11 +76,11 @@ Cloud su AWS, pipeline di dati, machine learning e sistemi agentici, business in
 Scriviamo di AI in azienda dal punto di vista di chi la deve far funzionare e poi difendere: regole, responsabilità, controllo, e ogni tanto i conti tecnici che nessuno fa.
 
 <!-- BLOG-POST-LIST:START -->
+- [Come si misura la sicurezza di un agente AI](https://linkalab.it/ricerca-sviluppo-come-si-misura-la-sicurezza-ai/) <sub>27.10.2026</sub>
 - [Photoshop e Word riscritti in Rust con l’AI, Ghidra dentro l’agente: si assottiglia la barriera del reverse engineering](https://linkalab.it/ricerca-sviluppo-reverse-engineering-ai-agenti-software/) <sub>21.10.2026</sub>
 - [Policy as Code: come trasformare le regole aziendali da “linee guida su carta” a controlli automatici per l’AI](https://linkalab.it/policy-as-code-governance-regole-ai-aziendale/) <sub>13.10.2026</sub>
 - [Resell or Build? Perché l’era dell’AI sta azzerando le distanze tra le grandi software house e chi sviluppa su misura](https://linkalab.it/resell-or-build-sviluppo-software-ai-whitebox/) <sub>08.10.2026</sub>
 - [Ascoltare ciò che nessuno ascolta: come abbiamo portato il monitoraggio reputazionale dentro i podcast su Spotify](https://linkalab.it/ricerca-sviluppo-monitoraggio-reputazionale-podcast-spotify/) <sub>05.10.2026</sub>
-- [Agenti AI in produzione: perché le utenze condivise sono il buco nero della sicurezza aziendale](https://linkalab.it/agenti-ai-produzione-utenze-condivise-nhi-sicurezza/) <sub>01.10.2026</sub>
 
 <!-- BLOG-POST-LIST:END -->
 
