@@ -76,11 +76,11 @@ AWS cloud, data pipelines, machine learning and agentic systems, business intell
 We write about enterprise AI from the point of view of the people who have to run it and then defend it: rules, accountability, control, and now and then the technical arithmetic nobody bothers to do. The articles are in Italian.
 
 <!-- BLOG-POST-LIST:START -->
+- [Gen-Z e lavoro nell’era dell’AI: i valori “non negoziabili” che ridefiniscono il recruiting](https://linkalab.it/gen-z-lavoro-ai-employer-branding-valori/) <sub>05.11.2026</sub>
 - [AI in produzione: come individuare il degrado di un sistema prima che impatti sui processi aziendali](https://linkalab.it/ai-in-produzione-monitoraggio-degrado-observability/) <sub>03.11.2026</sub>
 - [Come si misura la sicurezza di un agente AI](https://linkalab.it/ricerca-sviluppo-come-si-misura-la-sicurezza-ai/) <sub>27.10.2026</sub>
 - [Photoshop e Word riscritti in Rust con l’AI, Ghidra dentro l’agente: si assottiglia la barriera del reverse engineering](https://linkalab.it/ricerca-sviluppo-reverse-engineering-ai-agenti-software/) <sub>21.10.2026</sub>
 - [Policy as Code: come trasformare le regole aziendali da “linee guida su carta” a controlli automatici per l’AI](https://linkalab.it/policy-as-code-governance-regole-ai-aziendale/) <sub>13.10.2026</sub>
-- [Resell or Build? Perché l’era dell’AI sta azzerando le distanze tra le grandi software house e chi sviluppa su misura](https://linkalab.it/resell-or-build-sviluppo-software-ai-whitebox/) <sub>08.10.2026</sub>
 
 <!-- BLOG-POST-LIST:END -->
 
