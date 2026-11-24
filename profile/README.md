@@ -76,11 +76,11 @@ Cloud su AWS, pipeline di dati, machine learning e sistemi agentici, business in
 Scriviamo di AI in azienda dal punto di vista di chi la deve far funzionare e poi difendere: regole, responsabilità, controllo, e ogni tanto i conti tecnici che nessuno fa.
 
 <!-- BLOG-POST-LIST:START -->
+- [Gemma 4 E2B su una GPU da portatile: LoRA consente di ottenere un incremento relativo della F1 di circa il 34,4%](https://linkalab.it/ricerca-sviluppo-gemma-4-e2b-lora-fine-tuning-gpu-8gb/) <sub>24.11.2026</sub>
 - [Dal PoC alla produzione: perché un progetto AI funziona in demo ma fallisce nella realtà aziendale](https://linkalab.it/dal-poc-alla-produzione-ai-enterprise-industrializzazione/) <sub>12.11.2026</sub>
 - [Un agente AI che scrive nel Data Catalog:                come lo abbiamo reso governabile](https://linkalab.it/ricerca-sviluppo-agente-ai-data-catalog-governance-openmetadata/) <sub>10.11.2026</sub>
 - [Gen-Z e lavoro nell’era dell’AI: i valori “non negoziabili” che ridefiniscono il recruiting](https://linkalab.it/gen-z-lavoro-ai-employer-branding-valori/) <sub>05.11.2026</sub>
 - [AI in produzione: come individuare il degrado di un sistema prima che impatti sui processi aziendali](https://linkalab.it/ai-in-produzione-monitoraggio-degrado-observability/) <sub>03.11.2026</sub>
-- [Come si misura la sicurezza di un agente AI](https://linkalab.it/ricerca-sviluppo-come-si-misura-la-sicurezza-ai/) <sub>27.10.2026</sub>
 
 <!-- BLOG-POST-LIST:END -->
 
